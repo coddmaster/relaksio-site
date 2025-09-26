@@ -235,7 +235,6 @@ export default function RelaksioLanding() {
 <a id="download-android" href="#" className="block w-full text-center rounded-2xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10 inline-flex items-center justify-center gap-2">
                 <Smartphone className="h-5 w-5" /> Get it on Google Play
 </a>
-<p className="text-center text-xs text-white/60">* Replace links with your real store URLs</p>
 </div>
 </div>
 </div>
