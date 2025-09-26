@@ -13,7 +13,6 @@ import {
   Apple,
   Smartphone,
   Music2,
-  Github,
 } from "lucide-react";
 
 const sounds = [
@@ -113,10 +112,10 @@ export default function RelaksioLanding() {
               transition={{ duration: 0.6 }}
               className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05]"
             >
-              Breathe. <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-sky-300">Relax.</span> Sleep.
+              Breathe. <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-sky-300 inline-block pr-1">Relax.</span> Sleep.
             </motion.h1>
             <p className="mt-5 text-lg md:text-xl text-white/80 max-w-2xl">
-              Relaksio is a minimalist sound companion to help you focus, unwind, and drift into deep sleep. No accounts. No subscriptions. Just peace.
+              Relaksio is a minimalist sound companion to help you focus, unwind, and drift into deep sleep. Simple subscription, no accounts.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a href="#download-ios" className="rounded-2xl bg-white text-slate-900 px-6 py-3.5 font-semibold hover:bg-white/90 inline-flex items-center gap-2 shadow-lg shadow-white/10">
@@ -129,7 +128,7 @@ export default function RelaksioLanding() {
             <div className="mt-6 flex items-center gap-4 text-white/70 text-sm">
               <div className="inline-flex items-center gap-2"><Star className="h-4 w-4" /> 5.0 average rating</div>
               <div className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> No sign‑up required</div>
-              <div className="inline-flex items-center gap-2"><Infinity className="h-4 w-4" /> Lifetime access $2.99</div>
+              <div className="inline-flex items-center gap-2"><Timer className="h-4 w-4" /> Subscription $2.99/year</div>
             </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -202,12 +201,12 @@ export default function RelaksioLanding() {
         <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-400/20 via-sky-400/15 to-transparent p-[2px]">
           <div className="rounded-3xl bg-slate-900/60 p-8 md:p-12 grid md:grid-cols-2 gap-8 items-center">
 <div>
-              <h2 className="text-3xl md:text-4xl font-bold">Lifetime access for <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-300 to-indigo-300">$2.99</span></h2>
-<p className="mt-4 text-white/80">Unlock all premium sounds forever. One simple purchase. No recurring fees.</p>
+              <h2 className="text-3xl md:text-4xl font-bold">Just <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-300 to-indigo-300">$2.99/year</span></h2>
+              <p className="mt-4 text-white/80">Access the full library and future updates with a simple yearly subscription.</p>
 <ul className="mt-6 space-y-3 text-white/80">
-<li className="inline-flex items-center gap-2"><ShieldCheck className="h-5 w-5" /> Secure purchase via RevenueCat</li>
-<li className="inline-flex items-center gap-2"><Infinity className="h-5 w-5" /> Access on all your devices</li>
-<li className="inline-flex items-center gap-2"><Timer className="h-5 w-5" /> Free updates forever</li>
+                <li className="flex items-center gap-2"><ShieldCheck className="h-5 w-5" /> Secure purchase via RevenueCat</li>
+                <li className="flex items-center gap-2"><Infinity className="h-5 w-5" /> Use on all your devices</li>
+                <li className="flex items-center gap-2"><Timer className="h-5 w-5" /> Auto‑renew, cancel anytime</li>
 </ul>
 </div>
 <div className="space-y-3">
@@ -246,7 +245,7 @@ export default function RelaksioLanding() {
 </details>
 <details className="rounded-2xl border border-white/10 bg-white/5 p-6">
 <summary className="cursor-pointer font-medium">Is there a subscription?</summary>
-<p className="mt-3 text-white/80">No subscriptions. One‑time purchase unlocks all premium sounds forever.</p>
+            <p className="mt-3 text-white/80">Yes. Relaksio is $2.99 per year with auto‑renew. Cancel anytime.</p>
 </details>
 <details className="rounded-2xl border border-white/10 bg-white/5 p-6">
 <summary className="cursor-pointer font-medium">Can I use it offline?</summary>
@@ -267,9 +266,8 @@ export default function RelaksioLanding() {
 <nav className="flex items-center gap-6">
 <a href="/relaksio-site/privacy" className="hover:text-white">Privacy</a>
 <a href="mailto:hello@example.com" className="hover:text-white">Support</a>
-<a href="https://github.com/coddmaster/relaksio-site" className="hover:text-white inline-flex items-center gap-2"><Github className="h-4 w-4" /> GitHub</a>
 </nav>
-<p>© {new Date().getFullYear()} BrightLabs Studio. All rights reserved.</p>
+<p>© {new Date().getFullYear()} BrightApp Studio. All rights reserved.</p>
 </div>
 </footer>
 </div>
