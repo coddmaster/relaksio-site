@@ -111,18 +111,18 @@ export default function RelaksioLanding() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-6xl font-extrabold tracking-tight"
+              className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05]"
             >
               Breathe. <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-sky-300">Relax.</span> Sleep.
             </motion.h1>
-            <p className="mt-5 text-lg text-white/80 max-w-xl">
+            <p className="mt-5 text-lg md:text-xl text-white/80 max-w-2xl">
               Relaksio is a minimalist sound companion to help you focus, unwind, and drift into deep sleep. No accounts. No subscriptions. Just peace.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a href="#download-ios" className="rounded-2xl bg-white text-slate-900 px-5 py-3 font-semibold hover:bg-white/90 inline-flex items-center gap-2">
+              <a href="#download-ios" className="rounded-2xl bg-white text-slate-900 px-6 py-3.5 font-semibold hover:bg-white/90 inline-flex items-center gap-2 shadow-lg shadow-white/10">
                 <Apple className="h-5 w-5" /> Download on iOS
               </a>
-              <a href="#download-android" className="rounded-2xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10 inline-flex items-center gap-2">
+              <a href="#download-android" className="rounded-2xl border border-white/20 px-6 py-3.5 font-semibold hover:bg-white/10 inline-flex items-center gap-2 backdrop-blur">
                 <Smartphone className="h-5 w-5" /> Get it on Android
               </a>
             </div>
@@ -137,12 +137,12 @@ export default function RelaksioLanding() {
               transition={{ delay: 0.1, duration: 0.6 }}
               className="mt-8"
             >
-              <div className="-mx-2 px-2 overflow-x-auto">
-                <div className="flex gap-4 min-w-max">
+              <div className="-mx-2 px-2 overflow-x-auto scrollbar-thin">
+                <div className="flex gap-4 min-w-max snap-x snap-mandatory">
                   {appImages.map((src, i) => (
                     <div
                       key={i}
-                      className="shrink-0 w-[180px] md:w-[220px] lg:w-[240px] aspect-[9/19] overflow-hidden rounded-2xl border border-white/15 shadow-xl bg-slate-900/40"
+                      className="shrink-0 w-[180px] md:w-[220px] lg:w-[240px] aspect-[9/19] overflow-hidden rounded-2xl border border-white/15 shadow-xl bg-slate-900/40 snap-start transition-transform hover:-translate-y-1 hover:shadow-2xl"
                     >
                       <img src={src} alt={`Relaksio screenshot ${i + 1}`} className="h-full w-full object-cover" />
                     </div>
@@ -161,17 +161,17 @@ export default function RelaksioLanding() {
           <p className="mt-3 text-white/80">A simple toolkit to help you focus, relax, and sleep—without distractions.</p>
         </div>
         <div className="mt-10 grid md:grid-cols-3 gap-6">
-          <div className="rounded-2xl border border-white/10 bg-white/10 p-6">
+          <div className="rounded-2xl border border-white/15 bg-white/10/50 backdrop-blur p-6 shadow-lg">
             <div className="h-12 w-12 rounded-xl bg-white/10 grid place-items-center mb-4"><Waves className="h-6 w-6" /></div>
             <h3 className="font-semibold text-lg">Curated Ambient Library</h3>
             <p className="text-white/70 mt-2">10 free sounds + 30 premium. Hand‑picked for focus, sleep, and stress relief.</p>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/10 p-6">
+          <div className="rounded-2xl border border-white/15 bg-white/10/50 backdrop-blur p-6 shadow-lg">
             <div className="h-12 w-12 rounded-xl bg-white/10 grid place-items-center mb-4"><Timer className="h-6 w-6" /></div>
             <h3 className="font-semibold text-lg">Smart Sleep Timer</h3>
             <p className="text-white/70 mt-2">Drift off without worries—auto fade‑out and stop at your chosen time.</p>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/10 p-6">
+          <div className="rounded-2xl border border-white/15 bg-white/10/50 backdrop-blur p-6 shadow-lg">
             <div className="h-12 w-12 rounded-xl bg-white/10 grid place-items-center mb-4"><ShieldCheck className="h-6 w-6" /></div>
             <h3 className="font-semibold text-lg">Privacy‑First</h3>
             <p className="text-white/70 mt-2">No accounts, no trackers. RevenueCat handles purchases securely.</p>
@@ -199,10 +199,10 @@ export default function RelaksioLanding() {
 
       {/* Pricing */}
       <section id="pricing" className="mx-auto max-w-6xl px-4 py-16">
-        <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-500/10 to-sky-400/10 p-1">
+        <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-400/20 via-sky-400/15 to-transparent p-[2px]">
           <div className="rounded-3xl bg-slate-900/60 p-8 md:p-12 grid md:grid-cols-2 gap-8 items-center">
 <div>
-<h2 className="text-3xl md:text-4xl font-bold">Lifetime access for <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-300 to-indigo-300">$2.99</span></h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Lifetime access for <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-300 to-indigo-300">$2.99</span></h2>
 <p className="mt-4 text-white/80">Unlock all premium sounds forever. One simple purchase. No recurring fees.</p>
 <ul className="mt-6 space-y-3 text-white/80">
 <li className="inline-flex items-center gap-2"><ShieldCheck className="h-5 w-5" /> Secure purchase via RevenueCat</li>
@@ -211,7 +211,7 @@ export default function RelaksioLanding() {
 </ul>
 </div>
 <div className="space-y-3">
-<a id="download-ios" href="#" className="block w-full text-center rounded-2xl bg-white text-slate-900 px-5 py-3 font-semibold hover:bg-white/90 inline-flex items-center justify-center gap-2">
+              <a id="download-ios" href="#" className="block w-full text-center rounded-2xl bg-white text-slate-900 px-5 py-3 font-semibold hover:bg-white/90 inline-flex items-center justify-center gap-2 shadow-lg shadow-white/10">
 <Apple className="h-5 w-5" /> Download on the App Store
 </a>
 <a id="download-android" href="#" className="block w-full text-center rounded-2xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10 inline-flex items-center justify-center gap-2">

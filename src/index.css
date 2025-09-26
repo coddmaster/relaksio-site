@@ -8,6 +8,12 @@ html, body, #root { height: 100%; }
 /* Subtle site-wide background lift */
 body { background-color: rgb(15 23 42 / 1); }
 
+/* Thin, subtle scrollbar for horizontal galleries */
+/* Chrome/Safari */
+*::-webkit-scrollbar { height: 10px; width: 10px; }
+*::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 9999px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
 
 /* Optional: smooth fonts */
 body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
