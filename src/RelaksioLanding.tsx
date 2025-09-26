@@ -105,7 +105,7 @@ export default function RelaksioLanding() {
       {/* Hero */}
       <section className="relative">
         <div className="absolute inset-x-0 -top-20 h-72 bg-gradient-to-b from-indigo-500/20 to-transparent blur-3xl" />
-        <div className="mx-auto max-w-6xl px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
+        <div className="mx-auto max-w-6xl px-4 py-20 grid gap-10 items-start">
           <div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -131,16 +131,14 @@ export default function RelaksioLanding() {
               <div className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> No sign‑up required</div>
               <div className="inline-flex items-center gap-2"><Infinity className="h-4 w-4" /> Lifetime access $2.99</div>
             </div>
-          </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.6 }}
-            className="relative"
-          >
-            <div className="w-full max-w-5xl mx-auto">
-              <div className="-mx-4 px-4 overflow-x-auto">
-                <div className="flex gap-4 justify-center md:justify-start">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+              className="mt-8"
+            >
+              <div className="-mx-2 px-2 overflow-x-auto">
+                <div className="flex gap-4 min-w-max">
                   {appImages.map((src, i) => (
                     <div
                       key={i}
@@ -151,8 +149,8 @@ export default function RelaksioLanding() {
                   ))}
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
