@@ -155,8 +155,8 @@ export default function RelaksioLanding() {
               transition={{ delay: 0.1, duration: 0.6 }}
               className="mt-8"
             >
-              <div className="w-full overflow-x-auto overscroll-x-contain scroll-smooth snap-x snap-mandatory scrollbar-thin px-4">
-                <div className="flex gap-3 sm:gap-4">
+              <div className="w-full overflow-x-auto overscroll-x-contain scroll-smooth snap-x snap-mandatory scrollbar-thin px-4 touch-pan-y" style={{ WebkitOverflowScrolling: 'touch' }}>
+                <div className="flex gap-3 sm:gap-4 min-w-max">
                   {appImages.map((src, i) => (
                     <div
                       key={i}
