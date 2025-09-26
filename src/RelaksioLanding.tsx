@@ -155,12 +155,15 @@ export default function RelaksioLanding() {
               transition={{ delay: 0.1, duration: 0.6 }}
               className="mt-8"
             >
-              <div className="w-full overflow-x-auto overscroll-x-contain scroll-smooth snap-x snap-mandatory scrollbar-thin px-4 touch-pan-y" style={{ WebkitOverflowScrolling: 'touch' }}>
-                <div className="flex gap-3 sm:gap-4 min-w-max">
+              <div className="w-full px-4">
+                <div
+                  className="grid grid-cols-2 gap-3 sm:gap-4 md:flex md:gap-4 md:min-w-max md:overflow-x-auto md:overscroll-x-contain md:scroll-smooth md:snap-x md:snap-mandatory md:touch-pan-y"
+                  style={{ WebkitOverflowScrolling: 'touch' }}
+                >
                   {appImages.map((src, i) => (
                     <div
                       key={i}
-                      className="shrink-0 w-[150px] sm:w-[180px] md:w-[220px] lg:w-[240px] aspect-[9/19] overflow-hidden rounded-2xl border border-white/15 shadow-xl bg-slate-900/40 snap-center md:snap-none transition-transform hover:-translate-y-1 hover:shadow-2xl"
+                      className="w-full md:shrink-0 md:w-[180px] lg:w-[240px] aspect-[9/19] overflow-hidden rounded-2xl border border-white/15 shadow-xl bg-slate-900/40 md:snap-center transition-transform hover:-translate-y-1 hover:shadow-2xl"
                     >
                       <img src={src} alt={`Relaksio screenshot ${i + 1}`} className="h-full w-full object-cover" />
                     </div>
