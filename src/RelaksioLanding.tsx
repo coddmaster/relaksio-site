@@ -22,6 +22,13 @@ const sounds = [
   { id: 3, title: "White Noise", src: "", description: "Steady focus companion" },
 ];
 
+const appImages = [
+  "/relaksio-site/Main%20Screen.png",
+  "/relaksio-site/Choose%20Sound.png",
+  "/relaksio-site/Sleeep%20Timer.png",
+  "/relaksio-site/Visual%20Settings.png",
+];
+
 function SoundCard({ title, src, description }: { title: string; src: string; description: string }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [audio] = useState<HTMLAudioElement>(() => new Audio(src));
@@ -131,32 +138,17 @@ export default function RelaksioLanding() {
             transition={{ delay: 0.15, duration: 0.6 }}
             className="relative"
           >
-            <div className="aspect-[9/19] w-full max-w-sm mx-auto rounded-[2.2rem] border border-white/15 bg-gradient-to-b from-indigo-600/20 to-slate-900 p-3">
-              <div className="h-full w-full rounded-[1.8rem] bg-slate-900 p-5 flex flex-col">
-                <div className="flex items-center justify-between text-white/40 text-xs">
-                  <span>Relaksio</span>
-                  <span>00:12</span>
-                </div>
-                <div className="mt-6 flex-1 rounded-2xl bg-gradient-to-b from-sky-500/20 to-indigo-600/10 grid place-items-center">
-                  <Moon className="h-20 w-20" />
-                </div>
-                <div className="mt-6 grid grid-cols-3 gap-3">
-                  {[
-                    { label: "Ocean" },
-                    { label: "Rain" },
-                    { label: "White" },
-                    { label: "Wind" },
-                    { label: "Fire" },
-                    { label: "Forest" },
-                  ].map((b, i) => (
-                    <button key={i} className="rounded-xl bg-white/5 hover:bg-white/10 py-2 text-xs">
-                      {b.label}
-                    </button>
+            <div className="w-full max-w-5xl mx-auto">
+              <div className="-mx-4 px-4 overflow-x-auto">
+                <div className="flex gap-4 justify-center md:justify-start">
+                  {appImages.map((src, i) => (
+                    <div
+                      key={i}
+                      className="shrink-0 w-[180px] md:w-[220px] lg:w-[240px] aspect-[9/19] overflow-hidden rounded-2xl border border-white/15 shadow-xl bg-slate-900/40"
+                    >
+                      <img src={src} alt={`Relaksio screenshot ${i + 1}`} className="h-full w-full object-cover" />
+                    </div>
                   ))}
-                </div>
-                <div className="mt-5 flex items-center justify-between text-sm">
-                  <button className="rounded-xl px-4 py-2 bg-white text-slate-900 font-semibold inline-flex items-center gap-2"><Play className="h-4 w-4" /> Play</button>
-                  <button className="rounded-xl px-4 py-2 border border-white/15 hover:bg-white/10 inline-flex items-center gap-2"><Timer className="h-4 w-4" /> Timer</button>
                 </div>
               </div>
             </div>
