@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 const sounds = [
-  { id: 1, title: "Ocean Waves", src: "", description: "Gentle shore to calm your mind" },
-  { id: 2, title: "Forest Rain", src: "", description: "Soft rain with distant thunder" },
-  { id: 3, title: "White Noise", src: "", description: "Steady focus companion" },
+  { id: 1, title: "Ocean Waves", src: "sounds/ocean.mp3", description: "Gentle shore to calm your mind" },
+  { id: 2, title: "Forest Rain", src: "sounds/rain.mp3", description: "Gentle rain under forest canopy" },
+  { id: 3, title: "White Noise", src: "sounds/white.mp3", description: "Steady focus companion" },
 ];
 
 const appImages = [
@@ -39,7 +39,10 @@ function SoundCard({ title, src, description }: { title: string; src: string; de
       setIsPlaying(false);
     } else {
       audio.currentTime = 0;
-      audio.play();
+      audio.volume = 1;
+      audio.play().catch(() => {
+        // Some browsers require user interaction; ignore errors here
+      });
       setIsPlaying(true);
       audio.onended = () => setIsPlaying(false);
     }
@@ -47,7 +50,7 @@ function SoundCard({ title, src, description }: { title: string; src: string; de
 
   return (
     <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur shadow-sm hover:shadow-lg transition-all">
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-white/10 to-white/0 transition-opacity" />
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-white/10 to-white/0 transition-opacity pointer-events-none" />
       <div className="flex items-start gap-4">
         <div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center">
           <Music2 className="h-6 w-6" />
@@ -183,7 +186,7 @@ export default function RelaksioLanding() {
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold">Listen before you download</h2>
-            <p className="mt-3 text-white/80">Short previews to get a feel for Relaksio's vibe. (Replace with your mp3 clips.)</p>
+            <p className="mt-3 text-white/80">Short previews to get a feel for Relaksio's vibe.</p>
           </div>
           <a href="#download-android" className="hidden md:inline-flex items-center gap-2 rounded-xl border border-white/15 px-4 py-2 hover:bg-white/10 text-sm">
             <Sparkles className="h-4 w-4" /> Try the full app
