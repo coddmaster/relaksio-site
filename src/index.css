@@ -8,6 +8,11 @@ html, body, #root { height: 100%; }
 /* Subtle site-wide background lift */
 body { background-color: rgb(15 23 42 / 1); }
 
+/* Prevent hero content clipping on tiny viewports */
+.min-w-0 { min-width: 0; }
+.max-w-full { max-width: 100%; }
+.box-border { box-sizing: border-box; }
+
 /* Thin, subtle scrollbar for horizontal galleries */
 /* Chrome/Safari */
 *::-webkit-scrollbar { height: 10px; width: 10px; }

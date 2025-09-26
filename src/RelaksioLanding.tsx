@@ -77,7 +77,7 @@ function SoundCard({ title, src, description }: { title: string; src: string; de
 
 export default function RelaksioLanding() {
   return (
-    <div className="min-h-screen text-white bg-[radial-gradient(1200px_600px_at_80%_-10%,rgba(120,119,198,.35),transparent),radial-gradient(600px_300px_at_20%_10%,rgba(56,189,248,.25),transparent)] bg-slate-900">
+    <div className="min-h-screen text-white bg-[radial-gradient(1200px_600px_at_80%_-10%,rgba(120,119,198,.35),transparent),radial-gradient(600px_300px_at_20%_10%,rgba(56,189,248,.25),transparent)] bg-slate-900 overflow-x-hidden">
       {/* Navbar */}
       <header className="sticky top-0 z-30 backdrop-blur border-b border-white/10 bg-slate-900/70">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
@@ -107,31 +107,47 @@ export default function RelaksioLanding() {
       {/* Hero */}
       <section className="relative">
         <div className="absolute inset-x-0 -top-20 h-72 bg-gradient-to-b from-indigo-500/20 to-transparent blur-3xl" />
-        <div className="mx-auto max-w-6xl px-4 py-20 grid gap-10 items-start">
+        <div className="mx-auto max-w-6xl px-4 py-20 grid gap-10 items-start min-w-0">
           <div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05]"
+              className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05]"
             >
               Breathe. <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-sky-300 inline-block pr-1">Relax.</span> Sleep.
             </motion.h1>
-            <p className="mt-5 text-lg md:text-xl text-white/80 max-w-2xl">
+            <p className="mt-5 text-sm sm:text-base md:text-lg leading-relaxed text-white/80 max-w-[34ch] sm:max-w-prose text-left break-words">
               Relaksio is a minimalist sound companion to help you focus, unwind, and drift into deep sleep. Simple subscription, no accounts.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a href="#download-ios" className="rounded-2xl bg-white text-slate-900 px-6 py-3.5 font-semibold hover:bg-white/90 inline-flex items-center gap-2 shadow-lg shadow-white/10">
-                <Apple className="h-5 w-5" /> Download on iOS
+            <div className="mt-8 hidden sm:flex sm:flex-row gap-3 min-w-0 w-full">
+              <a href="#download-ios" className="block w-full sm:w-auto max-w-[calc(100vw-2rem)] min-w-0 box-border rounded-2xl bg-white text-slate-900 px-2 sm:px-5 md:px-6 py-2 md:py-3.5 font-semibold hover:bg-white/90 flex items-center justify-center gap-1 sm:gap-2 shadow-lg shadow-white/10 text-xs sm:text-base whitespace-nowrap text-center mx-auto sm:mx-0">
+                <Apple className="hidden sm:block h-5 w-5" />
+                <span className="sm:inline hidden">Download on iOS</span>
+                <span className="sm:hidden inline">iOS</span>
               </a>
-              <a href="#download-android" className="rounded-2xl border border-white/20 px-6 py-3.5 font-semibold hover:bg-white/10 inline-flex items-center gap-2 backdrop-blur">
-                <Smartphone className="h-5 w-5" /> Get it on Android
+              <a href="#download-android" className="block w-full sm:w-auto max-w-[calc(100vw-2rem)] min-w-0 box-border rounded-2xl border border-white/20 px-2 sm:px-5 md:px-6 py-2 md:py-3.5 font-semibold hover:bg-white/10 flex items-center justify-center gap-1 sm:gap-2 backdrop-blur text-xs sm:text-base whitespace-nowrap text-center mx-auto sm:mx-0">
+                <Smartphone className="hidden sm:block h-5 w-5" />
+                <span className="sm:inline hidden">Get it on Android</span>
+                <span className="sm:hidden inline">Android</span>
               </a>
             </div>
-            <div className="mt-6 flex items-center gap-4 text-white/70 text-sm">
-              <div className="inline-flex items-center gap-2"><Star className="h-4 w-4" /> 5.0 average rating</div>
-              <div className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> No sign‑up required</div>
-              <div className="inline-flex items-center gap-2"><Timer className="h-4 w-4" /> Subscription $2.99/year</div>
+            <div className="mt-6 flex flex-wrap items-center gap-3 gap-y-2 text-white/70 text-xs sm:text-sm min-w-0 leading-tight">
+              <div className="inline-flex items-center gap-2">
+                <Star className="h-4 w-4" />
+                <span className="sm:hidden">4.7 rating</span>
+                <span className="hidden sm:inline">4.7 average rating</span>
+              </div>
+              <div className="inline-flex items-center gap-2">
+                <ShieldCheck className="h-4 w-4" />
+                <span className="sm:hidden">No sign-up</span>
+                <span className="hidden sm:inline">No sign-up required</span>
+              </div>
+              <div className="inline-flex items-center gap-2">
+                <Timer className="h-4 w-4" />
+                <span className="sm:hidden">$2.99/yr</span>
+                <span className="hidden sm:inline">Subscription $2.99/year</span>
+              </div>
             </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -139,12 +155,12 @@ export default function RelaksioLanding() {
               transition={{ delay: 0.1, duration: 0.6 }}
               className="mt-8"
             >
-              <div className="-mx-2 px-2 overflow-x-auto scrollbar-thin">
-                <div className="flex gap-4 min-w-max snap-x snap-mandatory">
+              <div className="w-full overflow-x-auto overscroll-x-contain scroll-smooth snap-x snap-mandatory scrollbar-thin px-4">
+                <div className="flex gap-3 sm:gap-4">
                   {appImages.map((src, i) => (
                     <div
                       key={i}
-                      className="shrink-0 w-[180px] md:w-[220px] lg:w-[240px] aspect-[9/19] overflow-hidden rounded-2xl border border-white/15 shadow-xl bg-slate-900/40 snap-start transition-transform hover:-translate-y-1 hover:shadow-2xl"
+                      className="shrink-0 w-[150px] sm:w-[180px] md:w-[220px] lg:w-[240px] aspect-[9/19] overflow-hidden rounded-2xl border border-white/15 shadow-xl bg-slate-900/40 snap-center md:snap-none transition-transform hover:-translate-y-1 hover:shadow-2xl"
                     >
                       <img src={src} alt={`Relaksio screenshot ${i + 1}`} className="h-full w-full object-cover" />
                     </div>
