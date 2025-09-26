@@ -5,6 +5,9 @@
 
 html, body, #root { height: 100%; }
 
+/* Subtle site-wide background lift */
+body { background-color: rgb(15 23 42 / 1); }
+
 
 /* Optional: smooth fonts */
 body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
