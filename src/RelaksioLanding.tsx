@@ -285,8 +285,9 @@ export default function RelaksioLanding() {
 <span>Relaksio</span>
 </div>
 <nav className="flex items-center gap-6">
-<a href="/relaksio-site/privacy" className="hover:text-white">Privacy</a>
-<a href="mailto:hello@example.com" className="hover:text-white">Support</a>
+            <a href="https://coddmaster.github.io/relaksio-privacy-policy/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Privacy</a>
+            <a href="https://forms.gle/HyAzdwEwNMMn22VFA" target="_blank" rel="noopener noreferrer" className="hover:text-white">Support</a>
+            <a href="mailto:bright.app.studios@gmail.com" className="hover:text-white">Email</a>
 </nav>
 <p>© {new Date().getFullYear()} BrightApp Studio LLC. All rights reserved.</p>
 </div>
