@@ -82,9 +82,11 @@ export default function RelaksioLanding() {
       <header className="sticky top-0 z-30 backdrop-blur border-b border-white/10 bg-slate-900/70">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-xl bg-gradient-to-br from-indigo-500 to-sky-400 grid place-items-center">
-              <Moon className="h-5 w-5" />
-            </div>
+            <img
+              src="/relaksio-site/app-icon.png"
+              alt="Relaksio icon"
+              className="h-8 w-8 rounded-xl object-cover"
+            />
             <span className="font-semibold tracking-tight">Relaksio</span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
@@ -279,16 +281,14 @@ export default function RelaksioLanding() {
 <footer className="border-t border-white/10">
 <div className="mx-auto max-w-6xl px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/70">
 <div className="flex items-center gap-2">
-<div className="h-8 w-8 rounded-xl bg-gradient-to-br from-indigo-500 to-sky-400 grid place-items-center">
-<Moon className="h-5 w-5" />
-</div>
+            <img src="/relaksio-site/app-icon.png" alt="Relaksio icon" className="h-8 w-8 rounded-xl object-cover" />
 <span>Relaksio</span>
 </div>
 <nav className="flex items-center gap-6">
 <a href="/relaksio-site/privacy" className="hover:text-white">Privacy</a>
 <a href="mailto:hello@example.com" className="hover:text-white">Support</a>
 </nav>
-<p>© {new Date().getFullYear()} BrightApp Studio. All rights reserved.</p>
+<p>© {new Date().getFullYear()} BrightApp Studio LLC. All rights reserved.</p>
 </div>
 </footer>
 </div>
