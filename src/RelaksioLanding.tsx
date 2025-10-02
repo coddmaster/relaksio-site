@@ -21,11 +21,12 @@ const sounds = [
   { id: 3, title: "White Noise", src: "sounds/white.mp3", description: "Steady focus companion" },
 ];
 
+const base = import.meta.env.BASE_URL || "/";
 const appImages = [
-  "/relaksio-site/Main%20Screen.png",
-  "/relaksio-site/Choose%20Sound.png",
-  "/relaksio-site/Sleeep%20Timer.png",
-  "/relaksio-site/Visual%20Settings.png",
+  `${base}Main%20Screen.png`,
+  `${base}Choose%20Sound.png`,
+  `${base}Sleeep%20Timer.png`,
+  `${base}Visual%20Settings.png`,
 ];
 
 function SoundCard({ title, src, description }: { title: string; src: string; description: string }) {
@@ -83,7 +84,7 @@ export default function RelaksioLanding() {
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2">
             <img
-              src="/relaksio-site/app-icon.png"
+              src={`${import.meta.env.BASE_URL}app-icon.png`}
               alt="Relaksio icon"
               className="h-8 w-8 rounded-xl object-cover"
             />
@@ -281,7 +282,7 @@ export default function RelaksioLanding() {
 <footer className="border-t border-white/10">
 <div className="mx-auto max-w-6xl px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/70">
 <div className="flex items-center gap-2">
-            <img src="/relaksio-site/app-icon.png" alt="Relaksio icon" className="h-8 w-8 rounded-xl object-cover" />
+            <img src={`${import.meta.env.BASE_URL}app-icon.png`} alt="Relaksio icon" className="h-8 w-8 rounded-xl object-cover" />
 <span>Relaksio</span>
 </div>
 <nav className="flex items-center gap-6">
