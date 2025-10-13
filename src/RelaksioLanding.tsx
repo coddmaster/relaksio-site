@@ -15,6 +15,8 @@ import {
   Music2,
 } from "lucide-react";
 
+const IOS_APP_URL = "https://apps.apple.com/app/id6752111530";
+
 const sounds = [
   { id: 1, title: "Ocean Waves", src: "sounds/ocean.mp3", description: "Gentle shore to calm your mind" },
   { id: 2, title: "Forest Rain", src: "sounds/rain.mp3", description: "Gentle rain under forest canopy" },
@@ -97,7 +99,7 @@ export default function RelaksioLanding() {
             <a href="#faq" className="hover:text-white">FAQ</a>
           </nav>
           <div className="flex items-center gap-3">
-            <a href="#download-ios" className="rounded-xl border border-white/15 px-3 py-2 text-sm hover:bg-white/10 inline-flex items-center gap-2">
+            <a href={IOS_APP_URL} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-white/15 px-3 py-2 text-sm hover:bg-white/10 inline-flex items-center gap-2">
               <Apple className="h-4 w-4" /> App Store
             </a>
             <a href="#download-android" className="rounded-xl bg-white text-slate-900 px-3 py-2 text-sm font-medium hover:bg-white/90 inline-flex items-center gap-2">
@@ -124,7 +126,7 @@ export default function RelaksioLanding() {
               Relaksio is a minimalist sound companion to help you focus, unwind, and drift into deep sleep. Simple subscription, no accounts.
             </p>
             <div className="mt-8 hidden sm:flex sm:flex-row gap-3 min-w-0 w-full">
-              <a href="#download-ios" className="block w-full sm:w-auto max-w-[calc(100vw-2rem)] min-w-0 box-border rounded-2xl bg-white text-slate-900 px-2 sm:px-5 md:px-6 py-2 md:py-3.5 font-semibold hover:bg-white/90 flex items-center justify-center gap-1 sm:gap-2 shadow-lg shadow-white/10 text-xs sm:text-base whitespace-nowrap text-center mx-auto sm:mx-0">
+              <a href={IOS_APP_URL} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto max-w-[calc(100vw-2rem)] min-w-0 box-border rounded-2xl bg-white text-slate-900 px-2 sm:px-5 md:px-6 py-2 md:py-3.5 font-semibold hover:bg-white/90 flex items-center justify-center gap-1 sm:gap-2 shadow-lg shadow-white/10 text-xs sm:text-base whitespace-nowrap text-center mx-auto sm:mx-0">
                 <Apple className="hidden sm:block h-5 w-5" />
                 <span className="sm:inline hidden">Download on iOS</span>
                 <span className="sm:hidden inline">iOS</span>
@@ -235,7 +237,7 @@ export default function RelaksioLanding() {
 </ul>
 </div>
 <div className="space-y-3">
-              <a id="download-ios" href="#" className="block w-full text-center rounded-2xl bg-white text-slate-900 px-5 py-3 font-semibold hover:bg-white/90 inline-flex items-center justify-center gap-2 shadow-lg shadow-white/10">
+              <a id="download-ios" href={IOS_APP_URL} target="_blank" rel="noopener noreferrer" className="block w-full text-center rounded-2xl bg-white text-slate-900 px-5 py-3 font-semibold hover:bg-white/90 inline-flex items-center justify-center gap-2 shadow-lg shadow-white/10">
 <Apple className="h-5 w-5" /> Download on the App Store
 </a>
 <a id="download-android" href="#" className="block w-full text-center rounded-2xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10 inline-flex items-center justify-center gap-2">
