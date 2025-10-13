@@ -102,9 +102,12 @@ export default function RelaksioLanding() {
             <a href={IOS_APP_URL} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-white/15 px-3 py-2 text-sm hover:bg-white/10 inline-flex items-center gap-2">
               <Apple className="h-4 w-4" /> App Store
             </a>
-            <a href="#download-android" className="rounded-xl bg-white text-slate-900 px-3 py-2 text-sm font-medium hover:bg-white/90 inline-flex items-center gap-2">
-              <Smartphone className="h-4 w-4" /> Google Play
-            </a>
+            {/** Android CTA (header) temporarily hidden **/}
+            {false && (
+              <span aria-disabled="true" title="Android coming soon" className="rounded-xl bg-white text-slate-900 px-3 py-2 text-sm font-medium inline-flex items-center gap-2 opacity-60 cursor-not-allowed">
+                <Smartphone className="h-4 w-4" /> Coming soon
+              </span>
+            )}
           </div>
         </div>
       </header>
@@ -131,11 +134,14 @@ export default function RelaksioLanding() {
                 <span className="sm:inline hidden">Download on iOS</span>
                 <span className="sm:hidden inline">iOS</span>
               </a>
-              <a href="#download-android" className="block w-full sm:w-auto max-w-[calc(100vw-2rem)] min-w-0 box-border rounded-2xl border border-white/20 px-2 sm:px-5 md:px-6 py-2 md:py-3.5 font-semibold hover:bg-white/10 flex items-center justify-center gap-1 sm:gap-2 backdrop-blur text-xs sm:text-base whitespace-nowrap text-center mx-auto sm:mx-0">
-                <Smartphone className="hidden sm:block h-5 w-5" />
-                <span className="sm:inline hidden">Get it on Android</span>
-                <span className="sm:hidden inline">Android</span>
-              </a>
+              {/** Android CTA (hero) temporarily hidden **/}
+              {false && (
+                <span aria-disabled="true" title="Android coming soon" className="block w-full sm:w-auto max-w-[calc(100vw-2rem)] min-w-0 box-border rounded-2xl border border-white/20 px-2 sm:px-5 md:px-6 py-2 md:py-3.5 font-semibold flex items-center justify-center gap-1 sm:gap-2 backdrop-blur text-xs sm:text-base whitespace-nowrap text-center mx-auto sm:mx-0 opacity-60 cursor-not-allowed">
+                  <Smartphone className="hidden sm:block h-5 w-5" />
+                  <span className="sm:inline hidden">Android (coming soon)</span>
+                  <span className="sm:hidden inline">Android</span>
+                </span>
+              )}
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-3 gap-y-2 text-white/70 text-xs sm:text-sm min-w-0 leading-tight">
               <div className="inline-flex items-center gap-2">
@@ -240,9 +246,9 @@ export default function RelaksioLanding() {
               <a id="download-ios" href={IOS_APP_URL} target="_blank" rel="noopener noreferrer" className="block w-full text-center rounded-2xl bg-white text-slate-900 px-5 py-3 font-semibold hover:bg-white/90 inline-flex items-center justify-center gap-2 shadow-lg shadow-white/10">
 <Apple className="h-5 w-5" /> Download on the App Store
 </a>
-<a id="download-android" href="#" className="block w-full text-center rounded-2xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10 inline-flex items-center justify-center gap-2">
-                <Smartphone className="h-5 w-5" /> Get it on Google Play
-</a>
+              <span aria-disabled="true" title="Android coming soon" className="block w-full text-center rounded-2xl border border-white/20 px-5 py-3 font-semibold inline-flex items-center justify-center gap-2 opacity-60 cursor-not-allowed">
+                <Smartphone className="h-5 w-5" /> Android coming soon
+              </span>
 </div>
 </div>
 </div>
